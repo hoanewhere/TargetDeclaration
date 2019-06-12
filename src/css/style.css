@@ -1,3 +1,29 @@
+.main-form {
+  text-align: center;
+  margin: 100px 20%;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: #11cc00; }
+  .main-form h1 {
+    margin-bottom: 30px; }
+  .main-form input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    font-size: 16px;
+    box-shadow: none;
+    border: 1px solid #c9f3c6; }
+  .main-form .input-width-max {
+    width: 100%; }
+  .main-form input[type="submit"] {
+    background-color: #11cc00; }
+  .main-form p {
+    text-align: left; }
+  .main-form .new-acount-tab {
+    margin-top: 20px; }
+
 h1 {
   font-size: 40px; }
 
