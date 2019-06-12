@@ -14,15 +14,22 @@
     padding: 10px 10px;
     font-size: 16px;
     box-shadow: none;
-    border: 1px solid #c9f3c6; }
+    border: 2px solid #c9f3c6; }
   .main-form .input-width-max {
     width: 100%; }
+  .main-form .input-width-half {
+    width: 50%;
+    text-align: left; }
   .main-form input[type="submit"] {
+    margin-top: 30px;
     background-color: #11cc00; }
   .main-form p {
-    text-align: left; }
-  .main-form .new-acount-tab {
-    margin-top: 20px; }
+    text-align: left;
+    margin: 10px 0;
+    color: black; }
+
+.new-acount-tab {
+  margin-top: 20px; }
 
 h1 {
   font-size: 40px; }
