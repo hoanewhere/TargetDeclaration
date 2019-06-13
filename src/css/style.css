@@ -1,3 +1,46 @@
+.description h1 {
+  text-align: center;
+  padding: 40px; }
+
+.description p {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  line-height: 1.5em; }
+
+.description .description-sentence {
+  margin: 0 10%;
+  padding: 20px;
+  background-color: #0fb800;
+  border-radius: 5px; }
+
+.other-people {
+  text-align: center; }
+  .other-people .other-container {
+    border-radius: 5px;
+    margin: 100px 20px;
+    padding: 20px 0;
+    background-color: #0fb800; }
+  .other-people .other-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .other-people .other-box .other-window {
+      margin: 20px; }
+      .other-people .other-box .other-window p {
+        font-size: 16px;
+        margin-bottom: 10px; }
+  .other-people img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px; }
+  .other-people .pageing ul {
+    display: flex;
+    justify-content: center; }
+    .other-people .pageing ul li {
+      font-size: 16px;
+      margin-right: 10px;
+      list-style: none; }
+
 .main-form {
   text-align: center;
   margin: 100px 20%;

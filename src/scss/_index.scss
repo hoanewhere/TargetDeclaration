@@ -1,0 +1,55 @@
+.description {
+  h1 {
+    text-align: center;
+    padding: 40px;
+  }
+  p {
+    padding: 0 20px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+  .description-sentence {
+    margin: 0 10%;
+    padding: 20px;
+    background-color: $green6;
+    border-radius: 5px;
+  }
+}
+
+.other-people {
+  text-align: center;
+  .other-container {
+    border-radius: 5px;
+    margin: 100px 20px;
+    padding: 20px 0;
+    background-color: $green6;
+  }
+  .other-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .other-window {
+      margin: 20px;
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  .pageing {
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        font-size: 16px;
+        margin-right: 10px;
+        list-style: none;
+      }
+    }
+  }
+}
