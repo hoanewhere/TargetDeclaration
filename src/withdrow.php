@@ -1,4 +1,5 @@
 <?php
+$title = '退会';
 include 'header.php';
 include 'bodyHeader.php';
 ?>

@@ -1,4 +1,5 @@
 <?php
+$title = 'マイページ';
 include 'header.php';
 include 'bodyHeader.php';
 ?>

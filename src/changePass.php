@@ -1,4 +1,5 @@
 <?php
+$title = 'パスワード変更';
 include 'header.php';
 include 'bodyHeader.php';
 ?>

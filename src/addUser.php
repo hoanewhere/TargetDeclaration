@@ -1,4 +1,5 @@
 <?php
+$title = 'ユーザ登録';
 include 'header.php';
 include 'bodyHeader.php';
 ?>

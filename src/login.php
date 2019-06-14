@@ -1,4 +1,5 @@
 <?php
+$title = 'ログイン';
 include 'header.php';
 include 'bodyHeader.php';
 ?>

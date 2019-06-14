@@ -1,4 +1,5 @@
 <?php
+$title = 'パスワードリマインド';
 include 'header.php';
 include 'bodyHeader.php';
 ?>
