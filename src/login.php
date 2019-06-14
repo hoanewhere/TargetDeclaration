@@ -11,8 +11,8 @@ include 'bodyHeader.php';
         <input type="password" name="password" placeholder="Password" class="input-width-max">
         <input type="submit" value="Enter" class="input-width-max">
       </form>
-      <p class="new-acount-tab"><a href="#">→ New Acount</a></p>
-      <p class="new-acount-tab"><a href="#">→ Remaind Pass</a></p>
+      <p class="new-acount-tab"><a href="addUser.php">→ New Acount</a></p>
+      <p class="new-acount-tab"><a href="remindPass.php">→ Remaind Pass</a></p>
     </div>
   </main>
 <?php

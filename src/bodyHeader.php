@@ -2,13 +2,13 @@
 <div class="main-content">
   <header>
     <div class="header-logo">
-      <img src="../img/logo.png">
+      <a href="index.php"><img src="../img/logo.png"></a>
     </div>
     <nav>
       <ul>
-        <li><a href="#">TOP</a></li>
-        <li><a href="#">マイページ</a></li>
-        <li><a href="#">ログイン</a></li>
+        <li><a href="index.php">TOP</a></li>
+        <li><a href="myPage.php">マイページ</a></li>
+        <li><a href="login.php">ログイン</a></li>
       </ul>
     </nav>
   </header>
