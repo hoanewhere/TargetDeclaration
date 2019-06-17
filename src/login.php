@@ -4,7 +4,7 @@ include 'function.php';
 error_log('ログイン画面');
 
 // ログイン認証
-
+include 'auth.php';
 
 if (!empty($_POST)) {
   $email = $_POST['email'];

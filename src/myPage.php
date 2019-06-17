@@ -1,4 +1,8 @@
 <?php
+include 'function.php';
+?>
+
+<?php
 $title = 'マイページ';
 include 'header.php';
 include 'bodyHeader.php';

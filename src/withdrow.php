@@ -4,7 +4,7 @@ include 'function.php';
 error_log('退会画面');
 
 // ログイン認証する
-
+include 'auth.php';
 
 if (isset($_POST['widhdrow'])) {
   //退会処理実施

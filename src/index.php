@@ -1,4 +1,8 @@
 <?php
+include 'function.php';
+?>
+
+<?php
 $title = 'TOPページ';
 include 'header.php';
 include 'bodyHeader.php';
