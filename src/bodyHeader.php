@@ -11,7 +11,7 @@
           <li><a href="login.php">ログイン</a></li>
         <?php else: ?>
           <li><a href="myPage.php">マイページ</a></li>
-          <li><a href="#">ログアウト</a></li>
+          <li><a href="logout.php">ログアウト</a></li>
           <li><a href="withdrow.php">退会</a></li>
         <?php endif; ?>
 
