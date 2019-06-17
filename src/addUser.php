@@ -6,8 +6,8 @@ error_log('ログインユーザ画面');
 if (!empty($_POST)) {
   $userName = $_POST['user_name'];
   $email = $_POST['email'];
-  $password =$_POST['password'];
-  $rePassword =$_POST['re_password'];
+  $password = $_POST['password'];
+  $rePassword = $_POST['re_password'];
 
   error_log('ポストデータ(user_name):' . $userName);
   error_log('ポストデータ(email):' . $email);
@@ -16,6 +16,13 @@ if (!empty($_POST)) {
 
   // 入力項目のバリデーションチェック
 
+  // ユーザネームの文字数チェック
+  // ユーザネームの文字チェック
+  // emailの形式チェック
+  // パスワードの文字数チェック
+  // パスワードの文字チェック
+  // パスワードとreパスワードの一致チェック
+  // 登録済みのメアドじゃないかチェック
 
   // DB接続してデータ登録
   if (empty($errMsg)) {
@@ -26,7 +33,15 @@ if (!empty($_POST)) {
 
       $stmt = queryPost($dbh, $sql, $data);
       error_log('sql実行結果(ユーザ登録)' . print_r($stmt, true));
+
+      // ログイン情報保持
+      $_SESSION['login_email'] = $email;
+      $_SESSION['login_date'] = time();
+
+      error_log('セッション情報:' . print_r($_SESSION, true));
+
       header('Location:myPage.php');
+      exit;
     }
     catch (Exception $e) {
       error_log('エラー発生 :' . $e->getMessage() );

@@ -1,7 +1,16 @@
 <?php
 //    ログ取るかどうか
-    ini_set("log_errors", "ON");
-    ini_set("error_log", "php.log");
+ini_set("log_errors", "ON");
+ini_set("error_log", "php.log");
+
+// セッション設定
+session_start();
+session_regenerate_id();
+error_log('セッション情報:' . print_r($_SESSION, true));
+
+// エラーメッセージ
+$errMsg = array();
+
 
 // DB周り
 function dbConnect() {
@@ -30,6 +39,5 @@ function queryPost($dbh, $sql, $data) {
   return $stmt;
 }
 
-$errMsg = array();
 
 ?>
