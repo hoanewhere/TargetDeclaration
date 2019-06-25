@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOPページ</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<div class="main-content">
-  <header>
-    <div class="header-logo">
-      <img src="../img/logo.png">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">TOP</a></li>
-        <li><a href="#">マイページ</a></li>
-        <li><a href="#">ログイン</a></li>
-      </ul>
-    </nav>
-  </header>
+<?php
+include 'function.php';
+?>
+
+<?php
+$title = 'マイページ';
+include 'header.php';
+include 'bodyHeader.php';
+?>
   <main>
     <div class="mypage-container">
       <div class="my-side-container">
@@ -120,9 +106,6 @@
       </div>
     </div>
   </main>
-</div>
-<footer>
-  <p>© Copyright 2019 Target Declaration All rights reserved.</p>
-</footer>
-</body>
-</html>
+<?php
+include 'bodyFooter.php';
+?>
