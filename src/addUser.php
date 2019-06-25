@@ -29,7 +29,7 @@ if (!empty($_POST)) {
     try {
       $dbh = dbConnect();
       $sql = 'INSERT INTO users (user_name, password, email, create_date, update_date) VALUES (:user_name, :password, :email, :create_date, :update_date )';
-      $data = array(':user_name' => $userName, ':password' => $password, ':email' => $email, ':create_date' => date('Y-m-d H:i:s'), ':update_date' => date('Y-m-d H:i:s'));
+      $data = array(':user_name' => $userName, ':password' => password_hash($password, PASSWORD_DEFAULT), ':email' => $email, ':create_date' => date('Y-m-d H:i:s'), ':update_date' => date('Y-m-d H:i:s'));
 
       $stmt = queryPost($dbh, $sql, $data);
       error_log('sql実行結果(ユーザ登録)' . print_r($stmt, true));

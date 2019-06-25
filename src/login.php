@@ -22,30 +22,31 @@ if (!empty($_POST)) {
     // あればログイン、なければTOPページに遷移
     try {
       $dbh = dbConnect();
-      $sql = 'SELECT * FROM users WHERE email = :email AND password = :password';
-      $data = array(':email' => $email, ':password' => $password);
+      $sql = 'SELECT * FROM users WHERE email = :email';
+      $data = array(':email' => $email);
       $stmt = queryPost($dbh, $sql, $data);
       $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
       if (!empty($result)) {
-        // ログイン成功
-        error_log('ログイン成功');
-        $_SESSION['login_id'] = $result['id'];
-        $_SESSION['login_email'] = $result['email'];
-        $_SESSION['login_date'] = time();
+        // pass認証
+        if (password_verify($password, $result['password'])) {
+          // ログイン成功
+          error_log('ログイン成功');
+          $_SESSION['login_id'] = $result['id'];
+          $_SESSION['login_email'] = $result['email'];
+          $_SESSION['login_date'] = time();
 
-        error_log('セッション情報:' . print_r($_SESSION, true));
+          error_log('セッション情報:' . print_r($_SESSION, true));
 
-        header('Location:myPage.php');
-        exit;
+          header('Location:myPage.php');
+          exit;
+        }
       }
-      else {
-        // ログイン失敗
-        error_log('ログイン失敗');
-        session_destroy();
-        header('Location:index.php');
-        exit;
-      }
+      // ログイン失敗
+      error_log('ログイン失敗');
+      session_destroy();
+      header('Location:index.php');
+      exit;
     }
     catch(Exception $e) {
       error_log('エラー発生' . $e->getMessage());
