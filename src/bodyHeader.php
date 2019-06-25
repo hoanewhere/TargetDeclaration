@@ -7,7 +7,7 @@
     <nav>
       <ul>
         <li><a href="index.php">TOP</a></li>
-        <?php if (!isset($_SESSION['login_id'])): ?>
+        <?php if (!isset($_SESSION['login_email'])): ?>
           <li><a href="login.php">ログイン</a></li>
         <?php else: ?>
           <li><a href="myPage.php">マイページ</a></li>
