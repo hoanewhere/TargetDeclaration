@@ -1,16 +1,706 @@
-[15-Jun-2019 01:20:13 UTC] ログインユーザ画面
-[15-Jun-2019 01:20:15 UTC] ログインユーザ画面
-[15-Jun-2019 01:20:15 UTC] ポストデータ(user_name):saito
-[15-Jun-2019 01:20:15 UTC] ポストデータ(email):info1111@hogehoge.jp
-[15-Jun-2019 01:20:15 UTC] ポストデータ(password):
-[15-Jun-2019 01:20:15 UTC] ポストデータ($rePassword):
-[15-Jun-2019 01:20:15 UTC] 関数内PDOStatement Object
+[25-Jun-2019 07:03:31 UTC] セッション情報:Array
 (
-    [queryString] => INSERT INTO users (user_name, password, email, create_date, update_date) VALUES (:user_name, :password, :email, :create_date, :update_date )
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
 )
 
-[15-Jun-2019 01:20:15 UTC] sql実行結果(ユーザ登録)PDOStatement Object
+[25-Jun-2019 07:21:06 UTC] セッション情報:Array
 (
-    [queryString] => INSERT INTO users (user_name, password, email, create_date, update_date) VALUES (:user_name, :password, :email, :create_date, :update_date )
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:21:15 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:22:59 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:23:13 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:23:52 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:23:55 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:25:48 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:25:51 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:26:01 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:26:04 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:26:17 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:26:22 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:28:24 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:28:31 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:28 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:31 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:33 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:33 UTC] ログイン画面
+[25-Jun-2019 07:29:33 UTC] ログイン認証開始
+[25-Jun-2019 07:29:33 UTC] カレントURI:login.php
+[25-Jun-2019 07:29:34 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:36 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:37 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:29:40 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:30:06 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:30:12 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:32:06 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:32:10 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:41:47 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[25-Jun-2019 07:41:50 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:15:54 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:15:59 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:16:31 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:16:31 UTC] ログイン画面
+[26-Jun-2019 04:16:31 UTC] ログイン認証開始
+[26-Jun-2019 04:16:31 UTC] カレントURI:login.php
+[26-Jun-2019 04:16:32 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:20:10 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:25:17 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:27:53 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:28:01 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:28:04 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:28:57 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:29:15 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:29:53 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:30:08 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:30:37 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:30:40 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:30:53 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:08 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:11 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:24 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:27 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:43 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:31:46 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:32:55 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:40:17 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:40:31 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:42:24 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:42:28 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:43:08 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:50:03 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:50:15 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:50:37 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:52:30 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:53:59 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:54:29 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:54:30 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:54:32 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:17 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:22 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:51 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:53 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:56 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:57 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:58 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:58 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:58 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:58 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:59 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:55:59 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:00 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:01 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:02 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:09 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:23 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:27 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:29 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:37 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:56:38 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:57:19 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:57:35 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:59:03 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 04:59:07 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:00:31 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:00:34 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:04:47 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:07:11 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:07:18 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:08:32 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:08:34 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:09:01 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:09:13 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:09:16 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
+)
+
+[26-Jun-2019 05:09:22 UTC] セッション情報:Array
+(
+    [login_id] => 6
+    [login_email] => info22@hogehoge.jp
+    [login_date] => 1561443840
 )
 

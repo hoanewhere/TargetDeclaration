@@ -31,6 +31,7 @@ include 'bodyHeader.php';
             </select>
             <input type="submit" name="" value="SHOW" class="input-width-max">
           </form>
+          <button type="button" name="add-button">新規追加</button>
         </section>
       </div>
       <div class="my-main-container">
@@ -104,6 +105,20 @@ include 'bodyHeader.php';
           </article>
         </section>
       </div>
+    </div>
+    <div class="add-form">
+      <section>
+        <form class="" action="" method="post">
+          <div class="add-block">
+            <h3 class="add-title">新規Target　追加</h3>
+            <span class="cancel-add-form css-cancel"></span>
+              <div class="sententce">
+                <textarea name="target" rows="1">hogehoge</textarea>
+                <input type="date">
+                <input type="submit" name="" value="追加">
+              </div>
+          </div>
+      </section>
     </div>
   </main>
 <?php
