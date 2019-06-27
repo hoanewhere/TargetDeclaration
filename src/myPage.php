@@ -44,7 +44,7 @@ if (!empty($_POST)) {
       error_log('各スケジュールデータ:'. $row['scheduled_date']);
 
       $dbh2 = dbConnect();
-      $sql2 ='SELECT target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" AND scheduled_date = :scheduled_date';
+      $sql2 ='SELECT id, target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" AND scheduled_date = :scheduled_date';
       $data2 = array(':user_id'=>$_SESSION['login_id'], ':scheduled_date'=>$row['scheduled_date']);
       $stmt2 = queryPost($dbh2, $sql2, $data2);
       $results_target[] = $stmt2->fetchAll();
@@ -106,9 +106,10 @@ include 'bodyHeader.php';
                   <h3 class="sentence-date"><?php echo substr($results_scheduled[$i_date]['scheduled_date'], 0, 10); ?></h3>
                     <?php for($i_ta = 0; $i_ta < count($results_target[$i_date]); $i_ta++): ?>
                       <div class="sententce">
-                        <textarea name="target" rows="1"><?php echo  $results_target[$i_date][$i_ta]['target']; ?></textarea>
+                        <textarea name="target" rows="1" class="js-target-text"><?php echo  $results_target[$i_date][$i_ta]['target']; ?></textarea>
                         <input type="date" value=<?php echo substr($results_target[$i_date][$i_ta]['scheduled_date'], 0, 10); ?>>
-                        <input type="checkbox">
+                        <input type="checkbox" class="js-target-chk">
+                        <span class="remain-id js-remain-id"><?php echo  $results_target[$i_date][$i_ta]['id']; ?></span>
                       </div>
                     <?php endfor; ?>
                 </div>
