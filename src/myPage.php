@@ -34,6 +34,13 @@ if (!empty($_POST)) {
   $end_day = $_GET['end_day'];
   $attr_task = $_GET['attr_task'];
 
+  if ( empty($start_day) ) {
+    $start_day = '0000-01-01';
+  }
+  if ( empty($end_day) ) {
+    $end_day = '9999-12-30';
+  }
+
   error_log('開始日' . $start_day);
   error_log('終了日' . $end_day);
   error_log('表示属性' . $attr_task);
@@ -42,14 +49,14 @@ if (!empty($_POST)) {
     $dbh1 = dbConnect();
 
     if (empty($attr_task)) {
-      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" ORDER BY scheduled_date ASC';
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" AND scheduled_date >= :start_day AND scheduled_date <= :end_day ORDER BY scheduled_date ASC';
     } else if ($attr_task == 1) {
-      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "1" AND delete_flg = "0" ORDER BY scheduled_date ASC';
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "1" AND delete_flg = "0" AND scheduled_date >= :start_day AND scheduled_date <= :end_day ORDER BY scheduled_date ASC';
     } else {
-      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND delete_flg = "0" ORDER BY scheduled_date ASC';
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND delete_flg = "0" AND scheduled_date >= :start_day AND scheduled_date <= :end_day ORDER BY scheduled_date ASC';
     }
 
-    $data1 = array(':user_id'=>$_SESSION['login_id']);
+    $data1 = array(':user_id'=>$_SESSION['login_id'], ':start_day' => $start_day, ':end_day' => $end_day);
     $stmt1 = queryPost($dbh1, $sql1, $data1);
     $results_scheduled = $stmt1->fetchAll();
     error_log('現在のid:' . $_SESSION['login_id']);
