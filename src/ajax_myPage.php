@@ -21,12 +21,16 @@ if (!empty($_POST['target'])) {
     $errMsg['common'] = '例外発生';
     echo "";
   }
-} else if (!empty($_POST['chk'])) {
+} else if (isset($_POST['chk'])) {
+  error_log('chk項目　チェンジ');
+  $chk = $_POST['chk'];
   $id = $_POST['id'];
+  error_log('chk状態：' . $chk);
+
   try {
     $dbh = dbConnect();
-    $sql = 'UPDATE target SET complete_flg = "1" WHERE id = :id';
-    $data = array(':id' => $id);
+    $sql = 'UPDATE target SET complete_flg = :comp_flg WHERE id = :id';
+    $data = array(':comp_flg' => $chk ,':id' => $id);
     $stmt = queryPost($dbh, $sql, $data);
 
     $data = ['id' => $id];
@@ -54,5 +58,7 @@ if (!empty($_POST['target'])) {
     $errMsg['common'] = '例外発生';
     echo "";
   }
+} else {
+  error_log('POSTデータなし');
 }
 ?>

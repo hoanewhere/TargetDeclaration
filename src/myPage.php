@@ -2,6 +2,8 @@
 include 'function.php';
 
 error_log('マイページ画面');
+error_log('POSTデータ:' . print_r($_POST, true));
+error_log('GETデータ:' . print_r($_GET, true));
 
 // post確認
 if (!empty($_POST)) {
@@ -27,10 +29,26 @@ if (!empty($_POST)) {
     $errMsg['common'] = '例外発生';
   }
 } else {  // POSTない場合
-  //GETがない場合
+  // get情報取得
+  $start_day = $_GET['start_day'];
+  $end_day = $_GET['end_day'];
+  $attr_task = $_GET['attr_task'];
+
+  error_log('開始日' . $start_day);
+  error_log('終了日' . $end_day);
+  error_log('表示属性' . $attr_task);
+
   try {
     $dbh1 = dbConnect();
-    $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" ORDER BY scheduled_date ASC';
+
+    if (empty($attr_task)) {
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" ORDER BY scheduled_date ASC';
+    } else if ($attr_task == 1) {
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "1" AND delete_flg = "0" ORDER BY scheduled_date ASC';
+    } else {
+      $sql1 ='SELECT DISTINCT scheduled_date FROM target WHERE user_id = :user_id AND delete_flg = "0" ORDER BY scheduled_date ASC';
+    }
+
     $data1 = array(':user_id'=>$_SESSION['login_id']);
     $stmt1 = queryPost($dbh1, $sql1, $data1);
     $results_scheduled = $stmt1->fetchAll();
@@ -44,7 +62,15 @@ if (!empty($_POST)) {
       error_log('各スケジュールデータ:'. $row['scheduled_date']);
 
       $dbh2 = dbConnect();
-      $sql2 ='SELECT id, target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" AND scheduled_date = :scheduled_date';
+
+      if (empty($attr_task)) {
+        $sql2 ='SELECT id, target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "0" AND delete_flg = "0" AND scheduled_date = :scheduled_date';
+      } else if ($attr_task == 1) {
+        $sql2 ='SELECT id, target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND complete_flg = "1" AND delete_flg = "0" AND scheduled_date = :scheduled_date';
+      } else {
+        $sql2 ='SELECT id, target, complete_flg, scheduled_date FROM target WHERE user_id = :user_id AND delete_flg = "0" AND scheduled_date = :scheduled_date';
+      }
+
       $data2 = array(':user_id'=>$_SESSION['login_id'], ':scheduled_date'=>$row['scheduled_date']);
       $stmt2 = queryPost($dbh2, $sql2, $data2);
       $results_target[] = $stmt2->fetchAll();
@@ -74,22 +100,22 @@ include 'bodyHeader.php';
       <div class="my-side-container">
         <section class="side-bar">
           <h3>表示内容</h3>
-          <form action="#">
+          <form action="" method="get">
             <p>開始日</p>
             <input type="date" name="start_day" class="input-width-max">
             <p>終了日</p>
             <input type="date" name="end_day" class="input-width-max">
-            <p>表示単位</p>
+            <!-- <p>表示単位</p>
             <select class="input-width-half" name="display_unit">
-              <option value="year">YEAR</option>
-              <option value="MONTH">MONTH</option>
               <option value="DAY">DAY</option>
-            </select>
+              <option value="MONTH">MONTH</option>
+              <option value="year">YEAR</option>
+            </select> -->
             <p>属性</p>
             <select class="input-width-half" name="attr_task">
-              <option value="all">ALL</option>
-              <option value="not_yet">NOT YET</option>
-              <option value="complete">COMPLETE</option>
+              <option value="0">NOT YET</option>
+              <option value="1">COMPLETE</option>
+              <option value="2">ALL</option>
             </select>
             <input type="submit" name="" value="SHOW" class="input-width-max">
           </form>
@@ -108,7 +134,7 @@ include 'bodyHeader.php';
                       <div class="sententce">
                         <textarea name="target" rows="1" class="js-target-text"><?php echo  $results_target[$i_date][$i_ta]['target']; ?></textarea>
                         <input type="date" class="js-target-date" value=<?php echo substr($results_target[$i_date][$i_ta]['scheduled_date'], 0, 10); ?>>
-                        <input type="checkbox" class="js-target-chk">
+                        <input type="checkbox" class="js-target-chk" <?php if($results_target[$i_date][$i_ta]['complete_flg'] == 1) echo 'checked' ?>>
                         <span class="remain-id js-remain-id"><?php echo  $results_target[$i_date][$i_ta]['id']; ?></span>
                       </div>
                     <?php endfor; ?>
