@@ -109,9 +109,9 @@ include 'bodyHeader.php';
           <h3>表示内容</h3>
           <form action="" method="get">
             <p>開始日</p>
-            <input type="date" name="start_day" class="input-width-max">
+            <input type="date" name="start_day" class="input-width-max" value=<?php if(!empty($_GET['start_day'])) echo $_GET['start_day'] ?>>
             <p>終了日</p>
-            <input type="date" name="end_day" class="input-width-max">
+            <input type="date" name="end_day" class="input-width-max" value=<?php if(!empty($_GET['end_day'])) echo $_GET['end_day'] ?>>
             <!-- <p>表示単位</p>
             <select class="input-width-half" name="display_unit">
               <option value="DAY">DAY</option>
