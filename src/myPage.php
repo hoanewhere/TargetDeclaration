@@ -119,10 +119,10 @@ include 'bodyHeader.php';
               <option value="year">YEAR</option>
             </select> -->
             <p>属性</p>
-            <select class="input-width-half" name="attr_task">
-              <option value="0">NOT YET</option>
-              <option value="1">COMPLETE</option>
-              <option value="2">ALL</option>
+            <select class="input-width-max" name="attr_task">
+              <option value="0" <?php if(empty($attr_task)) echo 'selected' ?>>NOT YET</option>
+              <option value="1" <?php if($attr_task == 1) echo 'selected' ?>>COMPLETE</option>
+              <option value="2" <?php if($attr_task == 2) echo 'selected' ?>>ALL</option>
             </select>
             <input type="submit" name="" value="SHOW" class="input-width-max">
           </form>
