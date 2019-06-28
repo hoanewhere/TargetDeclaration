@@ -49,4 +49,21 @@ $(function() {
       $targetChk.parent('.sententce').css('display', 'none');
     })
   });
+
+  $('.js-target-date').on('change', function() {
+    console.log('ajax通信開始(dateチェンジ)');
+    var $targetDate = $(this);
+    $.ajax({
+      url: './ajax_myPage.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+        date: $targetDate.val(),
+        id: $targetDate.siblings('.js-remain-id').text()
+      }
+    }).done(function(data) {
+      console.log('ajax通信終了(dateチェンジ)');
+      location.reload();
+    })
+  });
 });

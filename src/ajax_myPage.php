@@ -37,6 +37,22 @@ if (!empty($_POST['target'])) {
     $errMsg['common'] = '例外発生';
     echo "";
   }
-}
+} else if (!empty($_POST['date'])) {
+  $date = $_POST['date'];
+  $id = $_POST['id'];
+  try {
+    $dbh = dbConnect();
+    $sql = 'UPDATE target SET scheduled_date = :scheduled_date WHERE id = :id';
+    $data = array(':scheduled_date' => $date, ':id' => $id);
+    $stmt = queryPost($dbh, $sql, $data);
 
+    $data = ['id' => $id];
+    echo json_encode($data);
+  }
+  catch(Exception $e) {
+    error_log('エラー発生 :' . $e->getMessage() );
+    $errMsg['common'] = '例外発生';
+    echo "";
+  }
+}
 ?>

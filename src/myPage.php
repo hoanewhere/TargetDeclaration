@@ -107,7 +107,7 @@ include 'bodyHeader.php';
                     <?php for($i_ta = 0; $i_ta < count($results_target[$i_date]); $i_ta++): ?>
                       <div class="sententce">
                         <textarea name="target" rows="1" class="js-target-text"><?php echo  $results_target[$i_date][$i_ta]['target']; ?></textarea>
-                        <input type="date" value=<?php echo substr($results_target[$i_date][$i_ta]['scheduled_date'], 0, 10); ?>>
+                        <input type="date" class="js-target-date" value=<?php echo substr($results_target[$i_date][$i_ta]['scheduled_date'], 0, 10); ?>>
                         <input type="checkbox" class="js-target-chk">
                         <span class="remain-id js-remain-id"><?php echo  $results_target[$i_date][$i_ta]['id']; ?></span>
                       </div>
