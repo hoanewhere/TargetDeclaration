@@ -171,6 +171,8 @@
     display: flex;
     align-items: center;
     border-radius: 5px; }
+  .main-bar .remain-id {
+    display: none; }
   .main-bar textarea {
     width: 70%;
     padding: 5px;
